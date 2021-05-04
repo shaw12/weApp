@@ -1,38 +1,302 @@
-.App {
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  position: relative;
+  overflow-x: hidden;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+a{
+  text-decoration: none;
+}
+.logo{
+  font-size: 28px;
+  font-weight: 500;
+}
+.logo a{
+  color: rgb(57, 57, 255);
+}
+ul{
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.menu__smallscreen{
+  display: none;
+}
+li a{
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+  text-decoration: none;
+  color: #222;
+  font-size: 18px;
+}
+li a svg{
+  margin-right: 6px;
+  font-size: 20px;
+  color: #8e8e8e;
+}
+.header__right{
+  display: none;
+}
+.add__bottom{
+  position: fixed;
+  right: 10px;
+  bottom: 30%;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 50%;
+  background: rgb(57, 57, 255);
+  z-index: 1000;
+}
+.add__bottom a{
+  color: #fff;
+  font-size: 20px;
+}
+
+/* News.js */
+.card{
+  height: 100vh;
+  position: relative;
+}
+.card img{
+  height: 100%;
+  width: 100vw;
+}
+.news__card{
+  width: 100%;
+  z-index: 100;
+  position: absolute;
+  bottom: 15%;
+  background-color: rgba(231, 231, 231, 0.6);
+  text-align: center;
+  padding: 10px;
+}
+.news__card h2{
+  padding: 5px 0;
+}
+.news__card__inner{
+  background: #fff;
+  width: 80%;
+  margin: auto;
+  position: relative;
+  padding: 10px 20px;
+}
+.quote{
+  position: absolute;
+  color: #8e8e8e;
+  top: -20px;
+  font-size: 40px;
+}
+.news__card__inner::before{
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #8e8e8e;
+}
+.news__card__inner span{
+  
+  color: #888;
+  float: right;
+}
+.news__card__inner::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.news__card h3{
+  text-align: right;
+  margin-right: 10px;
+  font-style: italic;
+  font-weight: normal;
+}
+
+/* User.js */
+.user__card{
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 16px;
+}
+.user__card img{
+  width: 44px;
+  height: 44px;
+  border-radius: 22px;
+}
+.user__card__inner{
+  margin-left: 20px;
+  width: 100%;
+}
+
+/* create article */
+form{
+  width: 100%;
+  padding: 25px 10px;
+}
+form div{
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 4px;
+}
+form label{
+  width: 20%;
+  font-style: italic;
+  color: #8888;
+}
+form input,
+form textarea{
+  width: 80%;
+  border: none;
+}
+input:focus, 
+textarea:focus, 
+button:focus{
+  outline: none;
+}
+button{
+  width: 100%;
+  text-transform: uppercase;
+  margin-top: 20px;
+  padding: 8px;
+  letter-spacing: 2px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+.btn-submit{
+  background-color: royalblue;
+  color: #fff;
+}
+
+/* User.js */
+
+.profile__card{
+  width: 80%;
+  height: 70vh;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+.profile__card img{
+  width: 98%;
+  height: 80%;
+}
+.profile__card h4{
+  margin-bottom: 5px;
+}
+
+.my__posts h2{
+  margin: 40px 0 10px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.my__posts img{
+  border-radius: 0;
+  margin-top: -5px;
+}
+.my__posts__post{
+  padding-bottom: 0;
+}
+.my__posts__post span{
+  float: right;
+  font-size: 12px;
+  color: #888;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Profile */
+.avtar{
+  width: 44px;
+  height: 44px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  
+}
+.trash{
+  border-radius: 4px;
+  z-index: 100000;
+  padding: 2px 5px;
+  background: rgb(255, 41, 41);
+  color: #fff;
+  cursor: pointer;
+}
+.my_articles{
+  padding-bottom: 20px;
+}
+.loading{
+  display: grid;
+  place-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+@media (max-width: 768px){
+  nav ul{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    flex-direction: column;
+    width: 240px;
+    height: 100%;
+    background: #fff;
+    align-items: flex-start;
+    z-index: 10000;
+  }
+  .menu__smallscreen{
+    display: block;
+    width: 100%;
+    font-size: 26px;
+    padding: 10px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  nav ul li{
+    padding: 0 10px;
+    width: 100%;
+  }
+  nav ul li a{
+    margin-left: 0;
+  }
+  nav ul li a div{
+    border-bottom: 1px solid rgb(231, 231, 231);
+    margin-left: 15px;
+    width: 100%;
+    padding: 10px 0;
+  }
+  .header__right{
+    display: block;
+    display: flex;
+    align-items: flex-end;
+  }
+  .header__right svg{
+    color: rgb(57, 57, 255);
+    font-size: 26px;
+  }
+  .header__right a svg{
+    color: #222;
+    margin-right: 25px;
+    
+    font-size: 20px;
+  }
+  .nav__hide{
+    transition: 0.3ms;
+    margin-left: -300px;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
