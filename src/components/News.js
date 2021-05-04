@@ -15,8 +15,6 @@ const News = () => {
     useEffect(() => {
         !state.data && dispatch(fetchArticle())
     }, [])
-    
-    console.log(state)
 
     const handleClick = (id) => {
         history.push(`/user/${id}`);

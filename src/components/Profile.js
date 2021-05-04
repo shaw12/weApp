@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { deletePost, fetchMyDetail, fetchUserDetail, updateProfile } from '../actions/allActions'
+import { deletePost, updateProfile } from '../actions/allActions'
 import {IoTrashSharp} from 'react-icons/io5'
 
 import { ToastContainer, toast } from 'react-toastify';

@@ -11,8 +11,6 @@ const Users = () => {
         dispatch(fetchUserList())
     }, [])
 
-    console.log(state)
-
     return (
         <div>
             {

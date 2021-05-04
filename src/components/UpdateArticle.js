@@ -67,10 +67,7 @@ function UpdateArticle() {
                 image: URL.createObjectURL(e.target.files[0])
             })
         }
-    }
-
-    console.log("object", state)
-    console.log(mainState)        
+    }  
 
     return (
         <div>

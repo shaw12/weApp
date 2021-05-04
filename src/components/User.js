@@ -10,8 +10,6 @@ const User = () => {
 
     let {id} = useParams()
 
-    console.log(state)
-
     useEffect(() => {
         dispatch(fetchUserDetail(`${id}`))
     }, [])
